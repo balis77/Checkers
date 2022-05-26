@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CheckerBot/1.0.0": {
+        "dependencies": {
+          "Game.Data": "1.0.0",
+          "Games.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CheckerBot.dll": {}
+        }
+      },
+      "Game.Data/1.0.0": {
+        "dependencies": {
+          "Games.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Game.Data.dll": {}
+        }
+      },
+      "Games.Domain/1.0.0": {
+        "runtime": {
+          "Games.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CheckerBot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Game.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Games.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

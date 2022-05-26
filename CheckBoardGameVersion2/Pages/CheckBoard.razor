@@ -1,0 +1,69 @@
+﻿@using CheckBoardGameVersion2.CheckboardElementsPages
+<h3>CheckBoard</h3>
+
+<div style="display:flex;align-items:center">
+    <div class="box" style="display:flex; justify-content:space-around">
+
+        <div class="chessboard">
+
+
+            @for (var i = 0; i < 8; i++)
+            {
+
+                int local_I = i;
+                <div class="row">
+                    @for (var j = 0; j < 8; j++)
+                    {
+                        CheckerBots.GetAllCheckers();
+                        
+                        //moveChecker.CheckDesk(checkerRepository.GetAllCheckers());
+                        int local_J = j;
+                        var checker = checkerRepository.GetChecker(i, j);
+
+                        bool CanMoveHere = moveChecker.cellsPosibleMove.Contains((i, j));
+                        <div @onclick="()=> moveChecker.MoveLogic(local_I,local_J)" class="column  @(CanMoveHere ?"active":"") ">
+                            @if (checker != null)
+                            {
+                                <div @onclick="()=>moveChecker.MoveCheckers(checker)" class="checker @checker.Color ">
+                                    <span>@(checker.Queen?"K":"")</span>
+                                </div>
+                            }
+                        </div>
+
+
+                    }
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+    <div class="block" style="justify-content:space-around; align-items:normal;">
+
+        @for (var i = 0; i < 6; i++)
+        {
+            <div class="row">
+                @for (var j = 0; j < 4; j++)
+                {
+
+
+                    var checker = checkerRepository.GetRemoveChecker(i, j);
+                    <div class="cellDeleteCheckers">
+
+                        @if (checker != null)
+                        {
+                            <div class="beatCheckers @checker.Color"></div>
+                        }
+
+
+                    </div>
+                }
+            </div>
+        }
+
+
+    </div>
+</div>
+
+

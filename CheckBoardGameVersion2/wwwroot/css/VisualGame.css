@@ -1,0 +1,138 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+body {
+    background-color: #4c4c4c;
+    background-color: #ededed;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+.row {
+}
+
+.column {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    border: 1px solid black;
+    
+}
+
+    .column.black {
+        background: tan;
+    }
+
+    .column.active {
+        border: 3px solid blue;
+    }
+    .column.beat {
+        border: 3px solid red;
+    }
+.row:nth-child(2n) .column:nth-child(2n+1) {
+    /*background: #eee;*/
+    background-color: #999
+}
+
+.row:nth-child(2n) .column:nth-child(2n) {
+    /*background: tan;*/
+    background-color: #fff;
+}
+
+.row:nth-child(2n+1) .column:nth-child(2n+1) {
+    /*background: tan;*/
+    background-color: #fff;
+}
+
+.row:nth-child(2n+1) .column:nth-child(2n) {
+    /*background: #eee;*/
+    background-color: #999
+}
+
+.checker {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding:21px;
+}
+
+    .checker.black {
+        background: #000;
+        color: #fff;
+    }
+
+    .checker.white {
+        background: #fff;
+    }
+
+    .checker.active {
+        border: 1px solid blue;
+    }
+.box {
+    margin:0 auto;
+    display:flex;
+    align-items:normal;
+    justify-content:space-around;
+}
+.centered {
+    display: inline-block;
+    margin: 0;
+}
+
+
+
+
+
+.chessboard {
+    width: 670px;
+    height: 690px;
+    margin: 20px;
+    border: 25px solid #333;
+
+}
+
+.chess-board {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.cellDeleteCheckers {
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+    border: 1px solid black;
+}
+.beatCheckers {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+    .beatCheckers.black {
+        background: #000;
+        color: #fff;
+    }
+    .beatCheckers.white {
+        background: #fff;
+    }
+.row:nth-child(2n) .cellDeleteCheckers:nth-child(2n+1) {
+    /*background: #eee;*/
+    background-color: #999
+}
+
+.row:nth-child(2n) .cellDeleteCheckers:nth-child(2n) {
+    /*background: tan;*/
+    background-color: #fff;
+}
+
+.row:nth-child(2n+1) .cellDeleteCheckers:nth-child(2n+1) {
+    /*background: tan;*/
+    background-color: #fff;
+}
+
+.row:nth-child(2n+1) .cellDeleteCheckers:nth-child(2n) {
+    /*background: #eee;*/
+    background-color: #999
+}
+.block {
+    margin-right:40%;
+}

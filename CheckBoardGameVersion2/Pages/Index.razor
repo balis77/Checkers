@@ -1,0 +1,33 @@
+﻿@page "/"
+@using Games.Domain
+<CheckBoard></CheckBoard>
+
+
+
+@*@for (int i = 0; i < 8; i++)
+{
+	int localI = i;
+	<div class="row">
+		@for (int j = 0; j < 8; j++)
+		{
+			int localJ = j;
+			var checker = blackCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
+			if (checker == null)
+			{
+				checker = whiteCheckers.FirstOrDefault(n => n.Column == j && n.Row == i);
+			}
+
+			bool canMoveHere = cellsPossible.Contains((i, j));
+
+			<div @onclick="() => MoveChecker(localI, localJ)" class="cell @(canMoveHere ? "active" : "")">
+				@if (checker != null)
+				{
+					<div @onclick="() => CheckerClicked(checker)"
+						 class="checker @checker.Color @(checker == activeChecker ? "active" : "")">
+						<span>@(checker.Direction == MoveDirection.king ? "K" : "")</span>
+					</div>
+				}
+			</div>
+		}
+	</div>
+}*@

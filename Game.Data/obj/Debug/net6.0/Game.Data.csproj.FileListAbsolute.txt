@@ -1,0 +1,15 @@
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\bin\Debug\net6.0\Game.Data.deps.json
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\bin\Debug\net6.0\Game.Data.dll
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\bin\Debug\net6.0\Game.Data.pdb
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\bin\Debug\net6.0\Games.Domain.dll
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\bin\Debug\net6.0\Games.Domain.pdb
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.csproj.AssemblyReference.cache
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.AssemblyInfoInputs.cache
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.AssemblyInfo.cs
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.csproj.CoreCompileInputs.cache
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.csproj.CopyComplete
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.dll
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\refint\Game.Data.dll
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\Game.Data.pdb
+C:\Users\Balis\source\repos\CheckBoardGameVersion2\Game.Data\obj\Debug\net6.0\ref\Game.Data.dll
