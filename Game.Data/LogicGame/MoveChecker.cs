@@ -11,34 +11,42 @@ namespace CheckGame.Data.LogicGame
         public CheckerRepository checkerRepository { get; set; }
         public List<(int row, int column)> cellsPosibleMove { get; set; } = new List<(int row, int column)>();
         public List<(int row, int column)> cellsPosibleBeat { get; set; } = new List<(int row, int column)>();
+        public List<Checker> CheckBotMove { get; set; } = new List<Checker>();
+        public List<Checker> CheckBotBeat { get; set; } = new List<Checker>();
         public Checker CheckClick { get; set; }
-        private bool ProgressСheck = true;
-        private bool beatChecker;
+        public bool ProgressСheck = true;
 
-        public MoveChecker()
-        {
-
-        }
+        
         public MoveChecker(CheckerRepository repos)
         {
             checkerRepository = repos;
         }
-        public void CheckDesk(List<Checker> CheckerAll)
+
+        public (int row, int column) SetPossible(int rows, int column)
         {
-            foreach (var Checker in CheckerAll)
-            {
-                CheckMove(Checker);
-            }
+            return (rows, column);
+        }
+        public void MoveCheckers(Checker activeChecker)
+        {
+
+
+            if (ProgressСheck && activeChecker.Color == BLACK)
+                return;
+            if (!ProgressСheck && activeChecker.Color == WHITE)
+                return;
+            CheckMove(activeChecker);
+
         }
         private void CheckMove(Checker activeChecker)
         {
             cellsPosibleMove.Clear();
+            cellsPosibleBeat.Clear();
+
             if (activeChecker != null)
             {
                 CheckClick = activeChecker;
 
                 List<int> rowsPossible = new List<int>();
-                List<int> columnPossible = new List<int>();
 
                 if (activeChecker.Direction == MoveDirection.black)
                 {
@@ -61,26 +69,6 @@ namespace CheckGame.Data.LogicGame
                 }
             }
         }
-        public (int row, int column) SetPossible(int rows, int column)
-        {
-            return (rows, column);
-        }
-        private void BeatChecker(int row, int column)
-        {
-            int rowsDifficl = row - CheckClick.Row;
-            int columnDifficl = column - CheckClick.Column;
-            CanBeatChecker(row + rowsDifficl, column + columnDifficl);
-        }
-        private void CanBeatChecker(int row, int column)
-        {
-            var checker = checkerRepository.GetChecker(row, column);
-            if (checker?.Color == null)
-            {
-                
-                cellsPosibleMove.Add(SetPossible(row, column));
-
-            }
-        }
         private void CanMoveHereCell(int row, int column)
         {
             var checker = checkerRepository.GetChecker(row, column);
@@ -93,20 +81,30 @@ namespace CheckGame.Data.LogicGame
                 BeatChecker(row, column);
             }
         }
-        public void MoveCheckers(Checker activeChecker)
-        {
-            if (ProgressСheck && activeChecker.Color == BLACK)
-                return;
-            if (!ProgressСheck && activeChecker.Color == WHITE)
-                return;
-            CheckMove(activeChecker);
 
+        private void BeatChecker(int row, int column)
+        {
+            int rowsDifficl = row - CheckClick.Row;
+            int columnDifficl = column - CheckClick.Column;
+            CanBeatChecker(row + rowsDifficl, column + columnDifficl);
         }
+        private void CanBeatChecker(int row, int column)
+        {
+            var checker = checkerRepository.GetChecker(row, column);
+            if (checker?.Color == null)
+            {
+                cellsPosibleBeat.Add(SetPossible(row, column));
+
+            }
+        }
+
+
         public void MoveLogic(int row, int column)
         {
-            bool canMove = cellsPosibleMove.Contains((row, column));
 
-            if (!canMove)
+            bool canMove = cellsPosibleMove.Contains((row, column));
+            bool canBeat = cellsPosibleBeat.Contains((row, column));
+            if (!canMove && !canBeat)
                 return;
             if (Math.Abs(CheckClick.Column - column) == 2)
             {
@@ -121,7 +119,7 @@ namespace CheckGame.Data.LogicGame
             }
             CheckClick.Row = row;
             CheckClick.Column = column;
-            
+
             if (CheckClick.Row == 0 && CheckClick.Color == WHITE)
             {
                 checkerRepository.Queen(CheckClick);
@@ -131,10 +129,12 @@ namespace CheckGame.Data.LogicGame
                 checkerRepository.Queen(CheckClick);
             }
 
+
             CheckMove(CheckClick);
+            checkerRepository.GameOver();
             ProgressСheck = !ProgressСheck;
             cellsPosibleMove.Clear();
-
+            cellsPosibleBeat.Clear();
         }
     }
 }

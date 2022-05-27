@@ -17,5 +17,6 @@ namespace CheckBoardGameVersion2.Pages
             moveChecker = new MoveChecker(checkerRepository);
             CheckerBots = new BotClass(moveChecker, checkerRepository);
         }
+        
     }
 }

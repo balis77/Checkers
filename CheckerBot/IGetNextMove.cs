@@ -7,5 +7,8 @@ using System.Threading.Tasks;
 namespace CheckerBot
 {
     //провіряє куда можна піти
-   
+    public interface IGetNextMove
+    {
+        void GetPossibleMove(Random random);
+    }
 }

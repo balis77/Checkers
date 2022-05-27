@@ -12,54 +12,60 @@ namespace CheckerBot
     //провіряє всю доску
     public interface ICheckBoardBot
     {
-        void GetAllCheckers();
+        void GeneradeBotBlack();
     }
-    public interface IGetNextMove
-    {
-    }
-    public interface IGetPossibleBeat
-    {
-        void GetPossibleBeat();
-    }
-    public sealed class BotClass : ICheckBoardBot,IGetNextMove,IGetPossibleBeat
-    {
-        private Checker CheckBotChecker { get; set; }
-        private CheckerRepository CheckerRepository { get; set; }
-        private MoveChecker MoveChecker { get; set; }
-        public List<(int row,int column)> cellsPossibleMoveBot { get; set; }
-        public List<(int row, int column)> cellsPossibleBeatBot { get; set; }
 
-        public BotClass(MoveChecker moveChecker,CheckerRepository checkerRepository)
+
+    public sealed class BotClass : ICheckBoardBot, IGetNextMove
+    {
+        private List<Checker> CheckMove { get; set; } = new List<Checker>();
+        private List<Checker> CheckBeat { get; set; } = new List<Checker>();
+        private Checker Click { get; set; }
+        private List<Checker> CheckersBlack { get; set; }
+        private CheckerRepository CheckerRepository { get; set; }
+        private MoveChecker Move { get; set; }
+        public List<(int row, int column)> cellsPossibleMove { get; set; }
+        public List<(int row, int column)> cellsPossibleBeat { get; set; }
+
+        public BotClass(MoveChecker moveChecker, CheckerRepository checkerRepository)
         {
-            MoveChecker = moveChecker;
+            Move = moveChecker;
             CheckerRepository = checkerRepository;
         }
-        public void GetAllCheckers ()
+        public void GeneradeBotBlack()
         {
-            var biba = CheckerRepository?.checkersList?.FindAll(n => n.Color == "black");
-            foreach (var checker in biba)
+
+            Random random = new Random();
+            cellsPossibleMove = new List<(int row, int column)>();
+            cellsPossibleBeat = new List<(int row, int column)>();
+            CheckersBlack = CheckerRepository.GetAllCheckersBlack();
+            if (!CheckersBlack.Any())
+            {
+                CheckerRepository.GameOver();
+                return;
+
+            }
+            foreach (var checker in CheckersBlack)
             {
                 GetNextMove(checker);
             }
-            GetPossibleBeat();
+
+            GetPossibleMove(random);
+
         }
+
+
 
         private void GetNextMove(Checker activeChecker)
         {
             if (activeChecker != null)
             {
-
-                CheckBotChecker = activeChecker;
+                Click = activeChecker;
                 List<int> rowsPossible = new List<int>();
-                List<int> columnPossible = new List<int>();
 
                 if (activeChecker.Direction == MoveDirection.black)
                 {
                     rowsPossible.Add(activeChecker.Row + 1);
-                }
-                if (activeChecker.Direction == MoveDirection.white)
-                {
-                    rowsPossible.Add(activeChecker.Row - 1);
                 }
                 if (activeChecker.Queen)
                 {
@@ -69,102 +75,101 @@ namespace CheckerBot
                 }
                 foreach (var row in rowsPossible)
                 {
-                    if (activeChecker.Column != -1 && activeChecker.Column !=8)
-                    {
-                        //CanMoveHereCell(row, activeChecker.Column + 1);
-                        //CanMoveHereCell(row, activeChecker.Column - 1);
-                    }
-                    
+
+                    CanMoveHereCell(row, activeChecker.Column + 1);
+                    CanMoveHereCell(row, activeChecker.Column - 1);
                 }
             }
         }
         private void CanMoveHereCell(int row, int column)
         {
-            var checker = CheckerRepository.GetChecker(row, column);
-            if (checker?.Color == null && checker?.Color == null)
+            if (row >= 8 || row < 0 || column >= 8 || column < 0)
             {
-                cellsPossibleMoveBot.Add(MoveChecker.SetPossible(row, column));
-            } 
-            if (( checker?.Color == "white") || ( checker?.Color == "black"))
+                return;
+            }
+            var checker = CheckerRepository.GetChecker(row, column);
+            if (checker?.Color == null)
+            {
+                bool presenceCheck = CheckMove.Contains(Click);
+                if (!presenceCheck)
+                {
+                    CheckMove.Add(Click);
+                }
+                cellsPossibleMove.Add(Move.SetPossible(row, column));
+            }
+            if (checker?.Color == "white")
             {
                 BeatChecker(row, column);
             }
+
+
         }
         private void BeatChecker(int row, int column)
         {
-            int rowsDifficl = row - CheckBotChecker.Row;
-            int columnDifficl = column - CheckBotChecker.Column;
+            int rowsDifficl = row - Click.Row;
+            int columnDifficl = column - Click.Column;
             CanBeatChecker(row + rowsDifficl, column + columnDifficl);
         }
         private void CanBeatChecker(int row, int column)
         {
-            var checker = CheckerRepository.GetChecker(row, column);
-            if (checker?.Color == null)
+            if (row >= 8 || row < 0 || column >= 8 || column < 0)
             {
-                cellsPossibleMoveBot.Add(MoveChecker.SetPossible(row, column));
-            }
-        }
-
-        public void GetPossibleBeat()
-        {
-            Random _rnd = new Random();
-            if ( cellsPossibleMoveBot != null)
-            {
-                int biba = cellsPossibleMoveBot.Count();
-                MoveCheckers(_rnd.Next(0, biba));
-            }
-            //if (cellsPossibleBeatBot != null)
-            //{
-            //    BeatChecker(_rnd.Next(0, cellsPossibleBeatBot.Count()));
-            //}
-        }
-
-        private void MoveCheckers(int checkMove)
-        {
-            int row = cellsPossibleMoveBot[checkMove].row;
-            int column = cellsPossibleMoveBot[checkMove].column;
-            MoveLogic(row, column);
-        }
-        private void BeatChecker(int checkBeat)
-        {
-            int row = cellsPossibleBeatBot[checkBeat].row;
-            int column = cellsPossibleBeatBot[checkBeat].column;
-            MoveLogic(row, column);
-           
-        }
-        private void MoveLogic(int row, int column)
-        {
-            bool canMove = cellsPossibleMoveBot.Contains((row, column));
-
-            if (!canMove)
                 return;
-            if (Math.Abs(CheckBotChecker.Column - column) == 2)
-            {
-                int jumpedColumn = (CheckBotChecker.Column + column) / 2;
-                int jumpedRow = (CheckBotChecker.Row + row) / 2;
-                var checkerBeat = CheckerRepository.GetChecker(jumpedRow, jumpedColumn);
-                if (checkerBeat.Color != CheckBotChecker.Color)
-                {
-                    CheckerRepository.IntilizationRemoveChecker(checkerBeat.Color);
-                    CheckerRepository.checkersList?.Remove(checkerBeat);
-                }
             }
-            CheckBotChecker.Row = row;
-            CheckBotChecker.Column = column;
-
-            if (CheckBotChecker.Row == 0 && CheckBotChecker.Color == "white")
+            var checker = CheckerRepository.GetChecker(row, column);
+            if (checker == null)
             {
-                CheckerRepository.Queen(CheckBotChecker);
+                bool presenceCheck = CheckBeat.Contains(Click);
+                if (!presenceCheck)
+                    CheckBeat.Add(Click);
+                cellsPossibleBeat.Add(Move.SetPossible(row, column));
             }
-            if (CheckBotChecker.Row == 7 && CheckBotChecker.Color == "black")
-            {
-                CheckerRepository.Queen(CheckBotChecker);
-            }
-
-            GetNextMove(CheckBotChecker);
-
-            cellsPossibleMoveBot.Clear();
-
         }
+
+
+        public void GetPossibleMove(Random random)
+        {
+
+            if (cellsPossibleBeat.Any())
+            {
+                Click = CheckBeat[0];
+            }
+            else
+            {
+                var amountCheck = CheckMove.Count();
+                int rndAmount = random.Next(0, amountCheck);
+                if (rndAmount != 0)
+                    rndAmount = rndAmount - 1;
+
+                Click = CheckMove[rndAmount];
+
+            }
+            cellsPossibleBeat.Clear();
+            cellsPossibleMove.Clear();
+
+            GetNextMove(Click);
+            Move.CheckClick = Click;
+            Move.cellsPosibleMove = cellsPossibleMove;
+            Move.cellsPosibleBeat = cellsPossibleBeat;
+
+            if (cellsPossibleBeat.Any())
+            {
+                int row = cellsPossibleBeat[0].row;
+                int column = cellsPossibleBeat[0].column;
+                Move.MoveLogic(row, column);
+            }
+            else
+            {
+                int rndAmount = random.Next(0, cellsPossibleMove.Count());
+                int row = cellsPossibleMove[rndAmount].row;
+                int column = cellsPossibleMove[rndAmount].column;
+                Move.MoveLogic(row, column);
+            }
+            CheckBeat.Clear();
+            CheckMove.Clear();
+        }
+
+
+
     }
 }
