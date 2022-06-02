@@ -16,7 +16,7 @@ namespace CheckBoardGameVersion2.Pages
             moveChecker = new MoveChecker(checkerRepository);
         }
         public void SomeMethod(Checker checker)
-        {
+        { 
             moveChecker.Checkers(checker);
             moveChecker.ChecksBeat();
         }
