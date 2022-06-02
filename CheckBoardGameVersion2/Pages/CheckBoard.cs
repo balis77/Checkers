@@ -1,7 +1,7 @@
 ﻿
-using CheckerBot;
 using CheckGame.Data.LogicGame;
 using Games.Data;
+using Games.Domain;
 
 namespace CheckBoardGameVersion2.Pages
 {
@@ -9,13 +9,16 @@ namespace CheckBoardGameVersion2.Pages
     {
         CheckerRepository checkerRepository { get; set; }
         MoveChecker moveChecker { get; set; }
-        BotClass CheckerBots { get; set; }
         protected override void OnInitialized()
         {
             checkerRepository = new CheckerRepository();
             checkerRepository.Initialization();
             moveChecker = new MoveChecker(checkerRepository);
-            CheckerBots = new BotClass(moveChecker, checkerRepository);
+        }
+        public void SomeMethod(Checker checker)
+        {
+            moveChecker.Checkers(checker);
+            moveChecker.ChecksBeat();
         }
         
     }

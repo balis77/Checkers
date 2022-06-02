@@ -10,3 +10,15 @@ C:\Users\Balis\source\repos\CheckBoardGameVersion2\Games.Domain\obj\Debug\net6.0
 C:\Users\Balis\source\repos\CheckBoardGameVersion2\Games.Domain\obj\Debug\net6.0\refint\Games.Domain.dll
 C:\Users\Balis\source\repos\CheckBoardGameVersion2\Games.Domain\obj\Debug\net6.0\Games.Domain.pdb
 C:\Users\Balis\source\repos\CheckBoardGameVersion2\Games.Domain\obj\Debug\net6.0\ref\Games.Domain.dll
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\bin\Debug\net6.0\Games.Domain.deps.json
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\bin\Debug\net6.0\Games.Domain.dll
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\bin\Debug\net6.0\Games.Domain.pdb
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.csproj.AssemblyReference.cache
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.AssemblyInfoInputs.cache
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.AssemblyInfo.cs
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.dll
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\refint\Games.Domain.dll
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\Games.Domain.pdb
+C:\Users\Balis\Documents\GitHub\Checkers\Games.Domain\obj\Debug\net6.0\ref\Games.Domain.dll

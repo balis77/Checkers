@@ -15,6 +15,7 @@ namespace Games.Data
         Checker GetChecker(int i, int j);
         Checker GetChecker(Checker checker);
         List<Checker> GetAllCheckersBlack();
+        List<Checker> GetAllCheckersWhite();
         void Initialization();
     }
 }

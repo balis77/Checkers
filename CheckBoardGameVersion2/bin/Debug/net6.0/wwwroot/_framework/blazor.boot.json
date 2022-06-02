@@ -196,19 +196,19 @@
       "mscorlib.dll": "sha256-vpgKSsIVVRm3ImOEM6Mg668KUXfSvUY2v2lQxER\/VSw=",
       "netstandard.dll": "sha256-EzmKN+AbNEDjd5nSFsILG121Oz5G6y6srA1Yq1Jo67k=",
       "System.Private.CoreLib.dll": "sha256-cC5\/4QFeEaYp0kJy5xgdDbYrYr8Rflocn4O4\/B\/5l0I=",
-      "CheckerBot.dll": "sha256-wlKICdaIrwhq1AmLOu7yBIHTNUORwhVEKulYnR78l50=",
-      "Game.Data.dll": "sha256-XlSZKpplltGH\/QwVr1gx1dFOcsZoripZ4arai97Fhig=",
-      "Games.Domain.dll": "sha256-nms9ejJ+Ed80DWoS\/F1FrbMYWFv1qy8RGSO06I3vX08=",
-      "CheckBoardGameVersion2.dll": "sha256-5FZ\/X\/UD8Zv+bd+7Hg3qeC2KmlG9CQdgSFWEhLaZHKc="
+      "CheckerBot.dll": "sha256-4+1OnIfEQ78BDH6rKS2cQRK6Pa8WPao9gSBMvdDv57E=",
+      "Game.Data.dll": "sha256-FbZm68E4edHOIXsH7cTHFz6G+dzD\/\/WvfI28yXBT\/vg=",
+      "Games.Domain.dll": "sha256-J4l5vuEQGR1YIPFmivD0ft0g2jYgWegTF3kepSC3Nt0=",
+      "CheckBoardGameVersion2.dll": "sha256-toNLqg6erjLONj+YvYLZIk03+rnQSfgdHWsHDQMD\/rE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "CheckerBot.pdb": "sha256-GLxrTFYjXV0+3lh1UVps\/+IOhAjRwmKEwdh7HtHWe4A=",
-      "Game.Data.pdb": "sha256-9LYnltgCFvpkV2Ihr6QkOtJWBZrK9l\/cYDkaSFOdMRg=",
-      "Games.Domain.pdb": "sha256-rFkYefwP0DWaGVpfLtXh2gSoFJVSj2C71jFaFgxlnFQ=",
-      "CheckBoardGameVersion2.pdb": "sha256-ILWs75oxr4kPEqyZRcUS7hMa8UeWsL7IdHsrm2TZhDM="
+      "CheckerBot.pdb": "sha256-\/ORZlbGdZITIRYehGfy+hMkMqikUpOIg9hHYVhM2SJQ=",
+      "Game.Data.pdb": "sha256-TRt\/\/vcEks6TYXI0EB9xsHc7GnFgH4iliAWcvzfGz24=",
+      "Games.Domain.pdb": "sha256-\/lgPEvO1p188SnC\/7rL4tDGLxLPqCCaMrt+e83zGLWE=",
+      "CheckBoardGameVersion2.pdb": "sha256-J7cCNdbPUAiF8gJDxgLX8NqSESI03wPAcF+27Qq6Gj8="
     },
     "runtime": {
       "dotnet.6.0.4.dckq00jdfr.js": "sha256-jOfMbaXeCm62yx0cPv3Z19yvcknDcZyUnruATVPdGPE=",

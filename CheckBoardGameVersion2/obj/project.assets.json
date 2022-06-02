@@ -1643,11 +1643,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
+      "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
       "projectName": "CheckBoardGameVersion2",
-      "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
+      "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
       "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\obj\\",
+      "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1668,11 +1668,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj": {
-              "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj"
+            "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj": {
+              "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj"
             },
-            "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj": {
-              "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj"
+            "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj": {
+              "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj"
             }
           }
         }

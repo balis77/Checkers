@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj",
       "projectName": "Games.Domain",
-      "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj",
+      "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj",
       "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\obj\\",
+      "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

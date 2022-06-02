@@ -1,8 +1,8 @@
 ﻿@using CheckBoardGameVersion2.CheckboardElementsPages
 <h3>CheckBoard</h3>
- <div class="counter">Счет @checkerRepository.ScoreBlack : @checkerRepository.ScoreWhite</div>
+<div class="counter">Счет @checkerRepository.ScoreBlack : @checkerRepository.ScoreWhite</div>
 <div style="display:flex;align-items:center">
-   
+
     <div class="box" style="display:flex; justify-content:space-around">
 
         <div class="chessboard">
@@ -13,29 +13,25 @@
 
                 int local_I = i;
                 <div class="row">
+
                     @for (var j = 0; j < 8; j++)
                     {
+                        //moveChecker.ChecksBeat();
                         int local_J = j;
                         var checker = checkerRepository.GetChecker(i, j);
-                         
                         bool CanMoveHere = moveChecker.cellsPosibleMove.Contains((i, j));
                         bool CanMoveBeat = moveChecker.cellsPosibleBeat.Contains((i, j));
-                        <div @onclick="()=> moveChecker.MoveLogic(local_I,local_J)" class="column  @(CanMoveHere ?"active":"") @(CanMoveBeat ?"beat":"") ">
+                        <div @onclick="()=> moveChecker.MoveLogic(local_I,local_J)" class="column @(CanMoveBeat ?"beat":"") @(CanMoveHere ?"active":"")  ">
                             @if (checker != null)
                             {
-                                <div @onclick="()=>moveChecker.MoveCheckers(checker)" class="checker @checker.Color ">
+                                <div @onclick="()=>SomeMethod(checker)" class="checker @checker.Color ">
                                     <span>@(checker.Queen?"K":"")</span>
                                 </div>
                             }
                         </div>
-                        if (!moveChecker.ProgressСheck)
-                        {
-                            CheckerBots.GeneradeBotBlack();
-                        }
-                        
-
 
                     }
+
                 </div>
             }
 

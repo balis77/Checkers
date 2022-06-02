@@ -3,6 +3,17 @@ using Games.Domain;
 
 namespace CheckGame.Data.LogicGame
 {
+    public interface IMoveChecker
+    {
+        void MoveCheckers(Checker activeChecker);
+    }
+    public static class SetInList
+    {
+        public static (int row, int column) SetPossible(int rows, int column)
+        {
+            return (rows, column);
+        }
+    }
     public sealed class MoveChecker
     {
         private const string WHITE = "white";
@@ -16,17 +27,112 @@ namespace CheckGame.Data.LogicGame
         public Checker CheckClick { get; set; }
         public bool ProgressСheck = true;
 
-        
+
         public MoveChecker(CheckerRepository repos)
         {
             checkerRepository = repos;
         }
 
-        public (int row, int column) SetPossible(int rows, int column)
+        public void GeneradeBotBlack()
         {
-            return (rows, column);
+
+            Random random = new Random();
+
+            var CheckersBlack = checkerRepository.GetAllCheckersBlack();
+            if (!CheckersBlack.Any())
+            {
+                checkerRepository.GameOver();
+                return;
+
+            }
+            foreach (var checker in CheckersBlack)
+            {
+                Checkers(checker);
+            }
+
+            GetPossibleMove(random);
+
         }
-        public void MoveCheckers(Checker activeChecker)
+        public void GetPossibleMove(Random random)
+        {
+
+            if (CheckBotBeat.Any())
+            {
+                CheckClick = CheckBotBeat[0];
+            }
+            else
+            {
+                var amountCheck = CheckBotMove.Count();
+                int rndAmount = random.Next(0, amountCheck);
+                if (rndAmount != 0)
+                    rndAmount = rndAmount - 1;
+
+                CheckClick = CheckBotMove[rndAmount];
+            }
+            cellsPosibleBeat.Clear();
+            cellsPosibleMove.Clear();
+
+            Checkers(CheckClick);
+
+            if (CheckBotBeat.Any())
+            {
+                int row = cellsPosibleBeat[0].row;
+                int column = cellsPosibleBeat[0].column;
+                MoveLogic(row, column);
+            }
+            else
+            {
+                int rndAmount = random.Next(0, cellsPosibleMove.Count());
+                int row = cellsPosibleMove[rndAmount].row;
+                int column = cellsPosibleMove[rndAmount].column;
+                MoveLogic(row, column);
+            }
+            CheckBotBeat.Clear();
+            CheckBotMove.Clear();
+        }
+        public void ChecksBeat()
+        {
+            var White = checkerRepository.GetAllCheckersWhite();
+
+            bool IsBatte = false;
+
+            if (!IsBatte || cellsPosibleBeat.Count <= 0)
+            {
+                foreach (var checker in White)
+                {
+                    SomeMethod(checker);
+                }
+
+            }
+
+            if (cellsPosibleBeat.Any())
+            {
+                cellsPosibleMove.Clear();
+            }
+        }
+        /// <summary>
+        /// Way 
+        /// </summary>
+        /// <param name="activeChecker"></param>
+        public void SomeMethod(Checker activeChecker)
+        {
+            List<int> rowsPossible = new List<int>();
+            if (activeChecker != null)
+            {
+
+                if (activeChecker.Direction == MoveDirection.white)
+                {
+                    rowsPossible.Add(activeChecker.Row - 1);
+                }
+
+            }
+            foreach (var row in rowsPossible)
+            {
+                CanMoveHereCell(row, activeChecker.Column + 1);
+                CanMoveHereCell(row, activeChecker.Column - 1);
+            }
+        }
+        public void Checkers(Checker activeChecker)
         {
 
 
@@ -36,11 +142,20 @@ namespace CheckGame.Data.LogicGame
                 return;
             CheckMove(activeChecker);
 
+
         }
+
         private void CheckMove(Checker activeChecker)
         {
-            cellsPosibleMove.Clear();
-            cellsPosibleBeat.Clear();
+
+            if (activeChecker.Color == WHITE)
+            {
+
+                cellsPosibleMove.Clear();
+                cellsPosibleBeat.Clear();
+
+            }
+
 
             if (activeChecker != null)
             {
@@ -62,19 +177,31 @@ namespace CheckGame.Data.LogicGame
                     rowsPossible.Add(activeChecker.Row + 1);
 
                 }
+
                 foreach (var row in rowsPossible)
                 {
                     CanMoveHereCell(row, activeChecker.Column + 1);
                     CanMoveHereCell(row, activeChecker.Column - 1);
                 }
+
             }
         }
+
         private void CanMoveHereCell(int row, int column)
         {
+            if (row >= 8 || row < 0 || column >= 8 || column < 0)
+            {
+                return;
+            }
             var checker = checkerRepository.GetChecker(row, column);
             if (checker?.Color == null && checker?.Color == null)
             {
-                cellsPosibleMove.Add(SetPossible(row, column));
+                bool presenceCheck = CheckBotMove.Contains(CheckClick);
+                if (!presenceCheck && CheckClick?.Color == BLACK)
+                {
+                    CheckBotMove.Add(CheckClick);
+                }
+                cellsPosibleMove.Add(SetInList.SetPossible(row, column));
             }
             if ((!ProgressСheck && checker?.Color == WHITE) || (ProgressСheck && checker?.Color == BLACK))
             {
@@ -88,12 +215,20 @@ namespace CheckGame.Data.LogicGame
             int columnDifficl = column - CheckClick.Column;
             CanBeatChecker(row + rowsDifficl, column + columnDifficl);
         }
+
         private void CanBeatChecker(int row, int column)
         {
+            if (row >= 8 || row < 0 || column >= 8 || column < 0)
+                return;
+
             var checker = checkerRepository.GetChecker(row, column);
             if (checker?.Color == null)
             {
-                cellsPosibleBeat.Add(SetPossible(row, column));
+                bool presenceCheck = CheckBotBeat.Contains(CheckClick);
+                if (!presenceCheck && CheckClick.Color == BLACK)
+                    CheckBotBeat.Add(CheckClick);
+
+                cellsPosibleBeat.Add(SetInList.SetPossible(row, column));
 
             }
         }
@@ -115,7 +250,17 @@ namespace CheckGame.Data.LogicGame
                 {
                     checkerRepository.IntilizationRemoveChecker(checkerBeat.Color);
                     checkerRepository.checkersList?.Remove(checkerBeat);
+                    CheckClick.Row = row;
+                    CheckClick.Column = column;
+                    Thread.Sleep(100);
+                    cellsPosibleBeat.Clear();
+                    Checkers(CheckClick);
+                    if (cellsPosibleBeat.Any())
+                    {
+                        ProgressСheck = !ProgressСheck;
+                    }
                 }
+
             }
             CheckClick.Row = row;
             CheckClick.Column = column;
@@ -128,13 +273,20 @@ namespace CheckGame.Data.LogicGame
             {
                 checkerRepository.Queen(CheckClick);
             }
-
-
-            CheckMove(CheckClick);
-            checkerRepository.GameOver();
             ProgressСheck = !ProgressСheck;
+            checkerRepository.GameOver();
             cellsPosibleMove.Clear();
             cellsPosibleBeat.Clear();
+
+            if (!ProgressСheck)
+            {
+                GeneradeBotBlack();
+
+            }
+
+
+
+
         }
     }
 }

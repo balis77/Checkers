@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "g152P0nfvoO0THPSpzuEzMc7HUfAfjnnT3loFrxqQjtq2cuiTaiF3f0iJu/Ygk4QONZD17TZe+yPThpiXpKzXQ==",
+  "dgSpecHash": "dPwXM5ApZNfY31V7qeAZckYEdtxQti2km5v5LEU6gnO1S3OEPpvJLI9Rd393DHqJk7qFvTfinDq/dsQ0kt/JtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
+  "projectFilePath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Balis\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.4\\microsoft.aspnetcore.authorization.6.0.4.nupkg.sha512",
     "C:\\Users\\Balis\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.4\\microsoft.aspnetcore.components.6.0.4.nupkg.sha512",

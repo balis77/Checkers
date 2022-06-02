@@ -11,37 +11,37 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = CheckBoardGameVersion2
 build_property.RootNamespace = CheckBoardGameVersion2
-build_property.ProjectDir = C:\Users\Balis\source\repos\CheckBoardGameVersion2\CheckBoardGameVersion2\
+build_property.ProjectDir = C:\Users\Balis\Documents\GitHub\Checkers\CheckBoardGameVersion2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Balis\source\repos\CheckBoardGameVersion2\CheckBoardGameVersion2
+build_property.MSBuildProjectDirectory = C:\Users\Balis\Documents\GitHub\Checkers\CheckBoardGameVersion2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/App.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/Pages/CheckBoard.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/Pages/CheckBoard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlY2tCb2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/Pages/Index.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/Shared/SurveyPrompt.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/_Imports.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/Shared/MainLayout.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tnb5lgoa9i
 
-[C:/Users/Balis/source/repos/CheckBoardGameVersion2/CheckBoardGameVersion2/Shared/NavMenu.razor]
+[C:/Users/Balis/Documents/GitHub/Checkers/CheckBoardGameVersion2/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-g4h0tngjng

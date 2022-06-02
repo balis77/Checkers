@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "guJyQ+rtaCVd52pU9vIs/KVpoT/zlLMBsRluKOajslqecQZXb2Q9p4ZrpjHjaTNHHCXf8sCxTfXCEg26SBJ1Dg==",
+  "dgSpecHash": "bfsr/0cLRaxC1i+s4lYvIuz1KaF4Wg6+OKoMfUT7ldvqgmw/dtFUtaFHIh/QQRRHqUx/Lku4SnwAE5x0fDEiPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj",
+  "projectFilePath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

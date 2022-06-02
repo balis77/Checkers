@@ -59,6 +59,8 @@ namespace Games.Data
         public Checker GetChecker(Checker checker) => checkersList.FirstOrDefault(checker);
 
         public List<Checker> GetAllCheckersBlack() => checkersList.FindAll(n => n.Color == "black");
+        public List<Checker> GetAllCheckersWhite() => checkersList.FindAll(n => n.Color == "white");
+
         public void IntilizationRemoveChecker(string removeChecker)
         {
             if (d == 4)

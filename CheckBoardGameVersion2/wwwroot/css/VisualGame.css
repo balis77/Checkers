@@ -65,7 +65,7 @@ body {
     }
 
     .checker.active {
-        border: 1px solid blue;
+        border: 2px solid blue;
     }
 .box {
     margin:0 auto;

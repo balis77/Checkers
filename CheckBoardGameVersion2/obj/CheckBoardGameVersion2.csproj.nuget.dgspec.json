@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj": {}
+    "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj": {
+    "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
+        "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
         "projectName": "CheckBoardGameVersion2",
-        "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
+        "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\CheckBoardGameVersion2.csproj",
         "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckBoardGameVersion2\\obj\\",
+        "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckBoardGameVersion2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj": {
-                "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj"
+              "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj": {
+                "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj"
               },
-              "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj": {
-                "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj"
+              "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj": {
+                "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj": {
+    "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj",
+        "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj",
         "projectName": "CheckerBot",
-        "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\CheckerBot.csproj",
+        "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\CheckerBot.csproj",
         "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\CheckerBot\\obj\\",
+        "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\CheckerBot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -113,11 +113,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj": {
-                "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj"
+              "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj": {
+                "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj"
               },
-              "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj": {
-                "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj"
+              "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj": {
+                "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj": {
+    "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj",
         "projectName": "Game.Data",
-        "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\Game.Data.csproj",
+        "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\Game.Data.csproj",
         "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Game.Data\\obj\\",
+        "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Game.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +178,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj": {
-                "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj"
+              "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj": {
+                "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj"
               }
             }
           }
@@ -212,14 +212,14 @@
         }
       }
     },
-    "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj": {
+    "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj",
         "projectName": "Games.Domain",
-        "projectPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\Games.Domain.csproj",
+        "projectPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\Games.Domain.csproj",
         "packagesPath": "C:\\Users\\Balis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balis\\source\\repos\\CheckBoardGameVersion2\\Games.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Balis\\Documents\\GitHub\\Checkers\\Games.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
